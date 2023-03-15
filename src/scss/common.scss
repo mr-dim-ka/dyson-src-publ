@@ -1,6 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .button {
+	display: inline-block;
 	@include adaptiveValue("font-size", 24, 16);
 	line-height: 137.5%; /* 33/24 */
 	color: #fff;
