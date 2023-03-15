@@ -10,6 +10,9 @@
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
+	// .page__opinion
+	&__opinion {
+	}
 }
 
 //==========================================================================================================================
@@ -141,6 +144,59 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			column-gap: rem(20);
+		}
+	}
+}
+
+//==========================================================================================================================
+
+.opinion {
+	background-color: #f8f8f8;
+	// .opinion__container
+	&__container {
+	}
+	// .opinion__row
+	&__row {
+		display: grid;
+		align-items: end;
+		@media (min-width: $mobile) {
+			grid-template-columns: auto 45%;
+		}
+	}
+	// .opinion__column
+	&__column {
+		&_1 {
+			align-self: center;
+		}
+	}
+	// .opinion__content
+	&__content {
+		padding: rem(40) 0;
+	}
+	// .opinion__image-ibg
+	&__image-ibg {
+		padding-bottom: 100%;
+	}
+}
+.content-opinion {
+	// .content-opinion__title
+	&__title {
+		@extend %ff-namu-pro;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 42, 26);
+		line-height: 113.636364%; /* 50/44 */
+		color: $blackColor;
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+	}
+	// .content-opinion__text
+	&__text {
+		color: #000;
+		p {
+			&:not(:last-child) {
+				margin-bottom: em(20, 18);
+			}
 		}
 	}
 }
