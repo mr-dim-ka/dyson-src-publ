@@ -122,6 +122,44 @@
 	}
 	&._select-checkbox {
 	}
+	&_control {
+		.select__body {
+			min-width: rem(280);
+		}
+		.select__title {
+			border: 1px solid $pinkColor;
+			border-radius: 3px;
+		}
+		.select__value {
+			height: rem(40);
+			color: $blackColor;
+			padding: rem(8) rem(25);
+			column-gap: rem(25);
+			&::after {
+				content: "\e904";
+				@extend %ic;
+				font-size: rem(8);
+			}
+		}
+		.select__options {
+			top: rem(42);
+			background-color: #fdfdfd;
+			padding: 0;
+		}
+		.select__option {
+			transition: all 0.3s ease 0s;
+			padding: rem(8) rem(25);
+			&:not(:last-child) {
+				border-bottom: 1px solid #ccc;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $pinkColor;
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 // Тег

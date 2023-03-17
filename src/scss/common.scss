@@ -15,4 +15,68 @@
 	&_pink {
 		background-color: $pinkColor;
 	}
+	// .button_black
+	&_black {
+		background-color: $blackColor;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $pinkColor;
+			}
+		}
+	}
+}
+
+.title {
+	@extend %ff-namu-pro;
+	font-weight: 900;
+	@include adaptiveValue("font-size", 42, 26);
+	line-height: 113.636364%; /* 50/44 */
+	color: $blackColor;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	@include adaptiveValue("gap", 30, 20);
+	// .pagination__arrows
+	&__arrows {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 20, 10);
+	}
+	// .pagination__arrow
+	&__arrow {
+		@include adaptiveValue("padding", 15, 10);
+		border: 1px solid $blackColor;
+		border-radius: rem(3);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+				border: 1px solid $pinkColor;
+			}
+		}
+		// .pagination__arrow_left
+		&_left {
+		}
+		// .pagination__arrow_right
+		&_right {
+		}
+	}
+	// .pagination__value
+	&__value {
+	}
+}
+.value-pagination {
+	font-size: rem(15);
+	line-height: 133.333333%; /* 20/15 */
+	color: $blackColor;
+	// .value-pagination__current
+	&__current {
+	}
+	// .value-pagination__all
+	&__all {
+	}
 }
