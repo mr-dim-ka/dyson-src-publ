@@ -28,6 +28,11 @@
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
+	// .page__faq
+	&__faq {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+	}
 }
 
 //==========================================================================================================================
@@ -677,6 +682,75 @@
 	// .review__btn
 	&__btn {
 		align-self: flex-start;
+	}
+}
+
+//==========================================================================================================================
+
+.faq {
+	background-color: #f8f8f8;
+	// .faq__container
+	&__container {
+	}
+	// .faq__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+	// .faq__spollers
+	&__spollers {
+		border-top: 1px solid rgba(#ababab, 0.5);
+		border-bottom: 1px solid rgba(#ababab, 0.5);
+		.spollers {
+			// .spollers__item
+			&__item {
+				&:not(:last-child) {
+					border-bottom: 1px solid rgba(#ababab, 0.5);
+				}
+			}
+			// .spollers__title
+			&__title {
+				@include adaptiveValue("padding-top", 35, 15);
+				@include adaptiveValue("padding-bottom", 35, 15);
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				column-gap: rem(15);
+				@include adaptiveValue("font-size", 20, 16);
+				line-height: 150%;
+				text-align: left;
+				color: $blackColor;
+				span {
+					transition: all 0.3s ease 0s;
+					&::before {
+						@include adaptiveValue("font-size", 30, 25);
+						transition: all 0.3s ease 0s;
+					}
+					@media (any-hover: hover) {
+						&:hover {
+							&::before {
+								color: $pinkColor;
+							}
+						}
+					}
+				}
+				&._spoller-active {
+					span {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+			// .spollers__body
+			&__body {
+				@include adaptiveValue("padding-bottom", 50, 25);
+				padding-top: rem(15);
+				@include adaptiveValue("font-size", 18, 14);
+				font-weight: 300;
+				line-height: 150%;
+				color: $blackColor;
+			}
+		}
 	}
 }
 

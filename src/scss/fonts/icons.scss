@@ -15,33 +15,36 @@
 	}
 }
 
-._icon-shopping-bag:before {
-	content: "\e908";
-}
 ._icon-heart:before {
-	content: "\f08a";
+	content: "\e90a";
 }
-._icon-arrow-left:before {
+._icon-shopping-bag:before {
 	content: "\e900";
 }
-._icon-arrow-right:before {
+._icon-arrow-left:before {
 	content: "\e901";
 }
-._icon-arrow-right-bottom:before {
+._icon-arrow-right:before {
 	content: "\e902";
 }
-._icon-check:before {
+._icon-arrow-right-bottom:before {
 	content: "\e903";
 }
-._icon-select-arrow:before {
+._icon-check:before {
 	content: "\e904";
 }
-._icon-telegram:before {
+._icon-plus:before {
 	content: "\e905";
 }
-._icon-vk:before {
+._icon-select-arrow:before {
 	content: "\e906";
 }
-._icon-youtube:before {
+._icon-telegram:before {
 	content: "\e907";
+}
+._icon-vk:before {
+	content: "\e908";
+}
+._icon-youtube:before {
+	content: "\e909";
 }
