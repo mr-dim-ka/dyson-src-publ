@@ -6,7 +6,7 @@
 	line-height: 137.5%; /* 33/24 */
 	color: #fff;
 	text-align: center;
-	padding: rem(15) rem(50) rem(15) rem(50);
+	border-radius: rem(3);
 	@include adaptiveValue("padding-top", 15, 8);
 	@include adaptiveValue("padding-bottom", 15, 8);
 	@include adaptiveValue("padding-left", 50, 25);
@@ -22,6 +22,18 @@
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $pinkColor;
+			}
+		}
+	}
+	// button_tr
+	&_tr {
+		border: 1px solid $blackColor;
+		color: $blackColor;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $pinkColor;
+				color: $pinkColor;
 			}
 		}
 	}
@@ -78,5 +90,20 @@
 	}
 	// .value-pagination__all
 	&__all {
+	}
+}
+
+.btn-more {
+	display: inline-block;
+	line-height: 138.888889%; /* 25/18 */
+	border-bottom: 1px solid $pinkColor;
+	color: $pinkColor;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom: 1px solid transparent;
+			color: lighten($pinkColor, 10%);
+			border-bottom: 1px solid lighten($pinkColor, 10%);
+		}
 	}
 }
