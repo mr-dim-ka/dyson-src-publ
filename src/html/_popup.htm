@@ -1,10 +1,51 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div aria-hidden="true" class="popup-review popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+			<div class="popup__btn-close">
+				<button data-close type="button" class="popup__close"><span></span></button>
+			</div>
+			<div class="popup__body">
+				<div class="popup__title">Написать отзыв</div>
+				<form class="popup__form form-popup" action="">
+					<div class="form-popup__line">
+						<div class="form-popup__rating rating rating_set">
+							<div class="rating__body">
+								<div class="rating__active"></div>
+								<div class="rating__items">
+									<input type="radio" class="rating__item" value="1" name="rating">
+									<input type="radio" class="rating__item" value="2" name="rating">
+									<input type="radio" class="rating__item" value="3" name="rating">
+									<input type="radio" class="rating__item" value="4" name="rating">
+									<input type="radio" class="rating__item" value="5" name="rating">
+								</div>
+							</div>
+							<div class="rating__value">3.6</div>
+						</div>
+					</div>
+					<div class="form-popup__line">
+						<input class="form-popup__input" autocomplete="off" type="text" name="form[]" data-error="Введите имя" placeholder="Ваше имя" data-required>
+					</div>
+					<div class="form-popup__line">
+						<textarea class="form-popup__textarea" autocomplete="off" name="form[]" placeholder="Комментарий" data-error="Напишите комментарий" data-required></textarea>
+					</div>
+					<div class="form-popup__line">
+						<!-- <div class="form-popup__body"></div> -->
+						<div class="form-popup__file file-form-popup">
+							<div class="file-form-popup__header">
+								<div class="file-form-popup__button">Загрузить фото</div>
+								<input id="formImage" class="file-form-popup__input" accept=".jpg, .png" autocomplete="off" type="file" name="form[]" data-error="Ошибка" data-value="">
+							</div>
+							<div class="file-form-popup__text">
+								Нажмите кнопку "Загрузить фото"<!-- или перетащите фотографию в эту область -->
+							</div>
+							<div id="formPreview" class="file-form-popup__preview"></div>
+						</div>
+					</div>
+					<div class="form-popup__line">
+						<button class="form-popup__button button button_black" type="submit">Отправить отзыв</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
