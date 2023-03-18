@@ -168,9 +168,12 @@ body::after {
 			font-weight: 400;
 			font-size: rem(14);
 			line-height: 114.285714%; /* 16/14 */
-			color: #ababab;
+			color: #000;
 			border: 1px solid #d9d9d9;
 			border-radius: rem(2);
+			&::placeholder {
+				color: #ababab;
+			}
 		}
 		// .form-popup__input
 		&__input {

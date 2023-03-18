@@ -38,6 +38,11 @@
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
+	// .page__contacts
+	&__contacts {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+	}
 }
 
 //==========================================================================================================================
@@ -840,6 +845,198 @@
 	// .item-news__button
 	&__button {
 		align-self: flex-start;
+	}
+}
+
+//==========================================================================================================================
+
+.contacts {
+	background-color: #f8f8f8;
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__row
+	&__row {
+		display: grid;
+		gap: rem(30);
+		row-gap: rem(40);
+		@media (min-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	// .contacts__column
+	&__column {
+	}
+}
+.contacts-connection {
+	// .contacts-connection__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+	// .contacts-connection__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(15);
+	}
+}
+.form-connection {
+	// .form-connection__item
+	&__item {
+		// .form-connection__item_name
+		&_name {
+		}
+		// .form-connection__item_phone
+		&_phone {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 55, 30);
+			}
+		}
+		// .form-connection__item_btn
+		&_btn {
+		}
+		&._form-error {
+			.form__error {
+				color: red;
+				font-size: rem(12);
+				margin-top: rem(5);
+			}
+		}
+	}
+	// .form-connection__input
+	&__input {
+		width: 100%;
+		padding: rem(15) rem(10);
+		border-bottom: 1px solid $blackColor;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 138.888889%; /* 25/18 */
+		color: #000;
+		background-color: transparent;
+		@media (min-width: $mobile) {
+			width: 80%;
+		}
+		&::placeholder {
+			color: #ababab;
+		}
+	}
+	// .form-connection__button
+	&__button {
+	}
+}
+.contacts-subscribe {
+	// .contacts-subscribe__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+	// .contacts-subscribe__form
+	&__form {
+	}
+}
+.form-subscribe {
+	// .form-subscribe__item
+	&__item {
+		// .form-subscribe__item_email
+		&_email {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 70, 30);
+			}
+		}
+		// .form-subscribe__item_btn
+		&_btn {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 35, 25);
+			}
+		}
+		// .form-subscribe__item_checkbox
+		&_checkbox {
+		}
+		&._form-error {
+			.form__error {
+				color: red;
+				font-size: rem(12);
+				margin-top: rem(5);
+			}
+		}
+	}
+	// .form-subscribe__input
+	&__input {
+		width: 100%;
+		padding: rem(15) rem(10);
+		border-bottom: 1px solid $blackColor;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 138.888889%; /* 25/18 */
+		color: #000;
+		background-color: transparent;
+		&::placeholder {
+			color: #ababab;
+		}
+		@media (min-width: $mobile) {
+			width: 80%;
+		}
+	}
+	// .form-subscribe__checkbox
+	&__checkbox {
+		@media (min-width: $mobile) {
+			max-width: rem(560);
+		}
+		&._form-error {
+			.form__error {
+				color: red;
+				font-size: rem(12);
+				margin-top: rem(5);
+			}
+		}
+		.checkbox {
+			// .checkbox__input
+			&__input {
+				&:focus + .checkbox__label:before {
+					box-shadow: none;
+				}
+				&:checked + .checkbox__label:before {
+					content: "\e904";
+					background: transparent;
+				}
+			}
+			// .checkbox__label
+			&__label {
+				display: flex;
+				&::before {
+					content: "";
+					font-size: rem(18);
+					align-self: flex-start;
+					flex: 0 0 rem(30);
+					width: rem(30);
+					height: rem(30);
+					border: 1px solid $blackColor;
+					border-radius: rem(3);
+					color: $pinkColor;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+			// .checkbox__text
+			&__text {
+				@include adaptiveValue("font-size", 16, 13);
+				line-height: 120%;
+				color: #000;
+				a {
+					display: inline-block;
+					color: $pinkColor;
+					border-bottom: 1px solid transparent;
+					transition: all 0.3s ease 0s;
+					@media (any-hover: hover) {
+						&:hover {
+							border-bottom: 1px solid $pinkColor;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
