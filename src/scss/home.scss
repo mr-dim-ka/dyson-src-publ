@@ -33,6 +33,11 @@
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
+	// .page__news
+	&__news {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+	}
 }
 
 //==========================================================================================================================
@@ -751,6 +756,90 @@
 				color: $blackColor;
 			}
 		}
+	}
+}
+
+//==========================================================================================================================
+
+.news {
+	// .news__container
+	&__container {
+	}
+	// .news__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 30);
+		}
+	}
+	// .news__items
+	&__items {
+		display: grid;
+		column-gap: rem(20);
+		row-gap: rem(30);
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 80, 40);
+		}
+		@media (min-width: $tablet) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	// .news__item
+	&__item {
+	}
+	// .news__button
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
+	// .news__btn
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+	}
+}
+.item-news {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(30);
+	// .item-news__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(294, 440);
+	}
+	// .item-news__body
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(20);
+	}
+	// .item-news__date
+	&__date {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: 150%;
+		color: #919191;
+	}
+	// .item-news__title
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: 120%;
+		color: $blackColor;
+	}
+	// .item-news__text
+	&__text {
+		flex: 1 1 auto;
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: 120%;
+		color: #000;
+	}
+	// .item-news__button
+	&__button {
+		align-self: flex-start;
 	}
 }
 
