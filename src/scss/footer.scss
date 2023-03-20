@@ -83,7 +83,7 @@
 			align-items: center;
 			&::before {
 				@extend %ic;
-				content: "\e904";
+				content: "\e906";
 				font-size: rem(9);
 				transition: all 0.3s ease 0s;
 			}
