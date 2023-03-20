@@ -516,8 +516,7 @@
 			border: 1px solid $blackColor;
 			border-radius: rem(3);
 			width: rem(220);
-			height: rem(64);
-			@include adaptiveValue("height", 64, 38);
+			@include adaptiveValue("height", 64, 50);
 			flex-direction: row-reverse;
 			margin: 0 auto;
 		}
