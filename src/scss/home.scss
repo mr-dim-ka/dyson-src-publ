@@ -49,8 +49,10 @@
 
 .mainpage {
 	background: linear-gradient(0deg, #dddddd, #dddddd);
+	display: flex;
 	// .mainpage__container
 	&__container {
+		flex: 1 1 auto;
 		display: grid;
 		column-gap: rem(20);
 		row-gap: rem(40);
@@ -97,7 +99,7 @@
 	}
 	// .mainpage__image-ibg
 	&__image-ibg {
-		padding-bottom: 100%;
+		padding-bottom: percent(850, 750);
 	}
 }
 
@@ -152,7 +154,7 @@
 		flex: 1 1 auto;
 		@extend %ff-namu-pro;
 		font-weight: 900;
-		font-size: rem(30);
+		@include adaptiveValue("font-size", 30, 24);
 		line-height: 110%; /* 33/30 */
 		color: $blackColor;
 		transition: all 0.3s ease 0s;
@@ -165,7 +167,7 @@
 	}
 	// .item-goods__button
 	&__button {
-		font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 18);
 		line-height: 137.5%; /* 33/24 */
 		color: $blackColor;
 		transition: all 0.3s ease 0s;
