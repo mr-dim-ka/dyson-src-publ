@@ -146,3 +146,17 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "catalog";
+
+.page {
+	// .page_home
+	&_home {
+	}
+	// .page_categories
+	&_categories {
+		.page__products {
+			padding-top: 0;
+			@include adaptiveValue("padding-top", 50, 25);
+		}
+	}
+}

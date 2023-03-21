@@ -1,0 +1,63 @@
+//==========================================================================================================================
+
+.page {
+	// .page__information
+	&__information {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+	}
+}
+.information {
+	// .information__container
+	&__container {
+	}
+	// .information__item
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 40);
+		}
+	}
+	// .information__title
+	&__title {
+		@extend %ff-namu-pro;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 42, 22);
+		line-height: 119.047619%; /* 50/42 */
+		color: $blackColor;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 15);
+		}
+		// .information__title_1
+		&_1 {
+			@include adaptiveValue("font-size", 42, 26);
+		}
+		// .information__title_2
+		&_2 {
+			@include adaptiveValue("font-size", 36, 24);
+		}
+		// .information__title_3
+		&_3 {
+			@include adaptiveValue("font-size", 30, 22);
+		}
+		// .information__title_4
+		&_4 {
+			@include adaptiveValue("font-size", 24, 20);
+		}
+		// .information__title_5
+		&_5 {
+			@include adaptiveValue("font-size", 20, 18);
+		}
+	}
+	// .information__text
+	&__text {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 140%;
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 35, 20);
+			}
+		}
+	}
+}
+
+//==========================================================================================================================

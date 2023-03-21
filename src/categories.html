@@ -1,138 +1,299 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Главная"
+	"title":"Категории"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page page_home">
-				<section class="page__mainpage mainpage">
-					<div class="mainpage__container">
-						<div class="mainpage__body">
-							<h1 class="mainpage__title">Уникальные технологии для ухода за волосами</h1>
-							<div class="mainpage__text">
-								Идеальная укладка для всех типов волос вместе с Dyson
-							</div>
-							<a class="mainpage__button button button_pink" href="">Подробнее</a>
+			<main class="page page_categories">
+				<section class="page__products products">
+					<div class="products__container">
+						<nav class="products__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Мультистайлеры Dyson</span>
+								</li>
+							</ul>
+						</nav>
+						<div class="products__title title">
+							Мультистайлеры Dyson
+							<span>141</span>
 						</div>
-						<div class="mainpage__media">
-							<div class="mainpage__image-ibg">
-								<img src="@img/mainpage/bg.png" alt="Картинка">
+						<div class="products__filter filter-products">
+							<div class="filter-products__buttons buttons-filter">
+								<button class="buttons-filter__btn" type="button" data-filter=".category-a">dyson стайлер для длинных волос</button>
+								<button class="buttons-filter__btn" type="button" data-filter=".category-b">dyson стайлер красный</button>
+								<button class="buttons-filter__btn" type="button" data-filter=".category-c">dyson hs01 airwrap compliete</button>
+								<button class="buttons-filter__btn" type="button" data-filter=".category-d">фен щетка дайсон</button>
+							</div>
+							<a class="filter-products__more btn-more" href="">Показать еще</a>
+						</div>
+						<div class="products__products">
+							<div class="products__control">
+								<select name="form[]" data-class-modif="control">
+									<option value="1" selected="selected">Сначала популярные</option>
+									<option value="2">Сначала дешёвые </option>
+									<option value="3">Сначала дорогие</option>
+									<option value="4">Новинки</option>
+									<option value="5">Высокий рейтинг</option>
+								</select>
+							</div>
+							<div class="products__items">
+								<div class="products__item mix category-a">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/01.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческамия
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__item mix category-a">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/02.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic HD07 с 5 насадками и подставкой
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__item mix category-b">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/03.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__item mix category-c">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/01.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческамия
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__item mix category-d">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/02.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic HD07 с 5 насадками и подставкой
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__item mix category-d">
+									<div class="products-card">
+										<div class="products-card__image-ibg products-card__image-ibg_contain">
+											<img src="@img/products/03.png" alt="">
+										</div>
+										<div class="products-card__body">
+											<div class="products-card__text">
+												Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
+											</div>
+											<div class="products-card__info info-products-card">
+												<div class="info-products-card__available">В наличии</div>
+												<div class="info-products-card__sale">-15%</div>
+											</div>
+											<div class="products-card__value value-products-card">
+												<div class="value-products-card__price">59 990Р</div>
+												<div class="value-products-card__old-price">69 990 Р</div>
+											</div>
+										</div>
+										<div class="products-card__footer footer-products-card">
+											<div data-quantity class="footer-products-card__quantity quantity">
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+											</div>
+											<a class="footer-products-card__button button button_black" href="">В корзину</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__footer">
+								<div class="products__pagination pagination">
+									<div class="pagination__arrows">
+										<button class="pagination__arrow pagination__arrow_left _icon-arrow-left" type="button"></button>
+										<button class="pagination__arrow pagination__arrow_right _icon-arrow-right" type="button"></button>
+									</div>
+									<div class="pagination__value value-pagination">
+										<span class="value-pagination__current">1</span> из <span class="value-pagination__all">3</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<div class="page__goods goods">
-					<div class="goods__container">
-						<div class="goods__items">
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/01.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Акции</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
+				<section class="page__information information">
+					<div class="information__container">
+						<div class="information__item">
+							<h3 class="information__title information__title_1">Базовый вектор развития</h3>
+							<div class="information__text">
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
 							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/02.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Фены</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
+						</div>
+						<div class="information__item">
+							<h3 class="information__title information__title_2">Базовый вектор развития</h3>
+							<div class="information__text">
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
 							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/03.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Стайлеры</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
+						</div>
+						<div class="information__item">
+							<h3 class="information__title information__title_3">Базовый вектор развития</h3>
+							<div class="information__text">
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
 							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/04.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Выпрямители</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
+						</div>
+						<div class="information__item">
+							<h3 class="information__title information__title_4">Базовый вектор развития</h3>
+							<div class="information__text">
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
 							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/01.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Акции</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
-							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/02.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Фены</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
-							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/03.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Стайлеры</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
-							</div>
-							<div class="goods__item">
-								<div class="item-goods">
-									<a class="item-goods__image-ibg" href="">
-										<img src="@img/goods/04.png" alt="картинка">
-									</a>
-									<div class="item-goods__body">
-										<div class="item-goods__name">
-											<a class="item-goods__name-link" href="">Выпрямители</a>
-										</div>
-										<a class="item-goods__button " href=""><span class="_icon-arrow-right">Подробнее</span></a>
-									</div>
-								</div>
+						</div>
+						<div class="information__item">
+							<h3 class="information__title information__title_5">Базовый вектор развития</h3>
+							<div class="information__text">
+								<p>
+									Фены Dyson универсальны. Они подходят для сушки разных типов волос. Насадки из комплекта помогают создавать укладки на любой вкус. Функциональность девайсов впечатляет не меньше, чем их уникальный дизайн. Ведущие стилисты отмечают, что техника Dyson для ухода за волосами идеально подходят для длительной работы за счет своей эргономичности. А за счет бесшумности инновационного мотора использование устройств стало максимально комфортным.
+								</p>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 				<section class="page__opinion opinion">
 					<div class="opinion__container">
 						<div class="opinion__row">
@@ -231,10 +392,6 @@
 						</div>
 					</div>
 				</section>
-				@@include('html/_products.htm',{
-				"title":"Спецпредложения",
-				"counter":"14"
-				})
 				<section class="page__reviews reviews">
 					<div class="reviews__container">
 						<div class="reviews__title title">
