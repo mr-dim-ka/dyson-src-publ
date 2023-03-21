@@ -110,7 +110,6 @@
 
 //==========================================================================================================================
 .products {
-	background-color: #f8f8f8;
 	// .products__container
 	&__container {
 	}
@@ -295,6 +294,22 @@
 			display: none;
 		}
 	}
+	// .info-products-card__favorite
+	&__favorite {
+		display: inline-block;
+		&::before {
+			font-size: rem(30);
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+		.page_categories & {
+			display: none;
+		}
+	}
 }
 .value-products-card {
 	@extend %ff-namu-pro;
@@ -365,6 +380,10 @@
 		display: inline-block;
 	}
 }
+
+.info-products-card {
+}
+
 //==========================================================================================================================
 .breadcrumbs {
 	white-space: nowrap;

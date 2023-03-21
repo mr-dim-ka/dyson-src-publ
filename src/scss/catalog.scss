@@ -1,6 +1,9 @@
 //==========================================================================================================================
 
 .page {
+	// .page__products
+	&__products {
+	}
 	// .page__information
 	&__information {
 		@include adaptiveValue("padding-top", 150, 40);

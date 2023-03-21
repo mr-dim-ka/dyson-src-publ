@@ -18,10 +18,11 @@
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
-	// .page__products
-	&__products {
+	// .page__special
+	&__special {
 		@include adaptiveValue("padding-top", 150, 40);
 		@include adaptiveValue("padding-bottom", 150, 40);
+		background-color: #f8f8f8;
 	}
 	// .page__reviews
 	&__reviews {
@@ -306,6 +307,14 @@
 	&__text {
 		font-weight: 300;
 		line-height: 130%;
+	}
+}
+
+//==========================================================================================================================
+
+.special {
+	// .special__container
+	&__container {
 	}
 }
 

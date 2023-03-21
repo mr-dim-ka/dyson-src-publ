@@ -31,13 +31,19 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 20, 10);
+		@include adaptiveValue("column-gap", 25, 10);
 		justify-content: space-between;
 	}
 	// .header__logo
 	&__logo {
 		position: relative;
 		z-index: 2;
+		display: inline-block;
+		flex: 0 0 rem(170);
+		@include adaptiveValue("max-width", 185, 95);
+		img {
+			max-width: 100%;
+		}
 		@media (max-width: $mobile) {
 			order: 2;
 			// margin-right: auto;
@@ -47,6 +53,21 @@
 	&__menu {
 		@media (max-width: $mobile) {
 			order: 1;
+		}
+	}
+	// .header__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 35, 15);
+		@media (max-width: $mobile) {
+			order: 3;
+		}
+	}
+	// .header__favorive
+	&__favorive {
+		&::before {
+			font-size: rem(28);
 		}
 	}
 	// .header__cart
@@ -73,9 +94,6 @@
 			color: #000;
 			font-size: rem(9);
 			margin-left: rem(2);
-		}
-		@media (max-width: $mobile) {
-			order: 3;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -113,7 +131,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		text-align: center;
-		@include adaptiveValue("column-gap", 30, 15, 1360, 768, 1);
+		@include adaptiveValue("column-gap", 30, 20, 1360, 768, 1);
 		row-gap: rem(15);
 		@media (max-width: $mobile) {
 			flex-direction: column;
