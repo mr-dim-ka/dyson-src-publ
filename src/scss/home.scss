@@ -146,7 +146,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: rem(20) rem(40) rem(30) rem(40);
+		@include adaptiveValue("padding-top", 20, 15);
+		@include adaptiveValue("padding-bottom", 30, 15);
+		@include adaptiveValue("padding-left", 40, 15);
+		@include adaptiveValue("padding-right", 40, 15);
 		transition: all 0.3s ease 0s;
 	}
 	// .item-goods__name

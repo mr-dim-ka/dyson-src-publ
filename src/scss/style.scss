@@ -147,6 +147,7 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "catalog";
+@import "card-product";
 
 .page {
 	// .page_home
@@ -155,8 +156,9 @@ body {
 	// .page_categories
 	&_categories {
 		.page__products {
-			padding-top: 0;
-			@include adaptiveValue("padding-top", 50, 25);
 		}
+	}
+	// .page_card-product
+	&_card-product {
 	}
 }

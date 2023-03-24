@@ -3,6 +3,7 @@
 .page {
 	// .page__products
 	&__products {
+		@include adaptiveValue("padding-top", 50, 25);
 	}
 	// .page__information
 	&__information {
@@ -10,6 +11,23 @@
 		@include adaptiveValue("padding-bottom", 150, 40);
 	}
 }
+
+//==========================================================================================================================
+
+.products {
+	// .products__container
+	&__container {
+	}
+	// .products__breadcrumbs
+	&__breadcrumbs {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+}
+
+//==========================================================================================================================
+
 .information {
 	// .information__container
 	&__container {

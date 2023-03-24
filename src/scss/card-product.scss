@@ -1,0 +1,228 @@
+//==========================================================================================================================
+.page {
+	// .page__product
+	&__product {
+		@include adaptiveValue("padding-top", 50, 20);
+	}
+}
+
+//==========================================================================================================================
+
+.product {
+	// .product__container
+	&__container {
+	}
+	// .product__breadcrumbs
+	&__breadcrumbs {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+	// .product__main
+	&__main {
+		@include adaptiveValue("padding-top", 60, 20);
+		@include adaptiveValue("padding-bottom", 150, 50);
+	}
+}
+.main-product {
+	display: grid;
+	@include adaptiveValue("row-gap", 50, 30, 768, 320, 1);
+	@media (min-width: $mobile) {
+		column-gap: rem(10);
+		grid-template-columns: percent(680, 1360) 1fr;
+	}
+	// .main-product__images
+	&__images {
+	}
+	// .main-product__content
+	&__content {
+	}
+}
+.images-product {
+	display: grid;
+	align-self: start;
+	row-gap: rem(15);
+	@media (min-width: $tablet) {
+		grid-template-columns: percent(95, 680) 1fr;
+		column-gap: rem(16);
+	}
+	// .images-product__thumbs
+	&__thumbs {
+		@media (max-width: $tablet) {
+			order: 2;
+		}
+		.swiper-wrapper {
+			@media (min-width: $tablet) {
+				display: grid;
+				gap: rem(16);
+			}
+		}
+	}
+	// .images-product__slider
+	&__slider {
+		align-self: start;
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
+}
+.thumbs-images {
+	// .thumbs-images__wrapper
+	&__wrapper {
+	}
+	// .thumbs-images__slide-ibg
+	&__slide-ibg {
+		cursor: pointer;
+		opacity: 0.5;
+		transition: all 0.3s ease 0s;
+		&.swiper-slide-thumb-active {
+			opacity: 1;
+		}
+		@media (min-width: $tablet) {
+			padding-bottom: percent(95, 95);
+			width: auto !important;
+		}
+		@media (max-width: $tablet) {
+			padding-bottom: percent(88, 480);
+		}
+		@media (max-width: $mobile) {
+			padding-bottom: percent(139, 737);
+		}
+	}
+}
+.slider-images {
+	// .slider-images__wrapper
+	&__wrapper {
+	}
+	// .slider-images__slide-ibg
+	&__slide-ibg {
+		padding-bottom: percent(554, 550);
+	}
+}
+
+.content-main-product {
+	/* 	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end; */
+	// .content-main-product__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("row-gap", 40, 20);
+		@media (min-width: $mobile) {
+			@include adaptiveValue("padding-left", 125, 20, 1360, 768, 1);
+			@include adaptiveValue("padding-top", 60, 0, 1360, 768, 1);
+		}
+	}
+	// .content-main-product__title
+	&__title {
+		@extend %ff-namu-pro;
+		@include adaptiveValue("font-size", 38, 24);
+		line-height: 110%;
+		color: $blackColor;
+	}
+	// .content-main-product__text
+	&__text {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 150%;
+		color: $blackColor;
+	}
+	// .content-main-product__more
+	&__more {
+		// display: inline-block;
+		align-self: start;
+		@media (min-width: $mobileSmall) {
+			display: none;
+		}
+	}
+	// .content-main-product__available
+	&__available {
+		@extend .info-products-card__available;
+	}
+	// .content-main-product__value
+	&__value {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: rem(20);
+		row-gap: rem(10);
+		@extend %ff-namu-pro;
+		font-weight: 900;
+	}
+	// .content-main-product__old-price
+	&__old-price {
+		@extend .value-products-card__old-price;
+	}
+	// .content-main-product__price
+	&__price {
+		@extend .value-products-card__price;
+	}
+	// .content-main-product__footer
+	&__footer {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(260), 1fr));
+		@include adaptiveValue("row-gap", 20, 15);
+		@include adaptiveValue("column-gap", 20, 15);
+	}
+}
+.footer-content-main-product {
+	// .footer-content-main-product__quantity
+	&__quantity {
+		&.quantity {
+			border: 1px solid $blackColor;
+			border-radius: rem(3);
+			width: rem(220);
+			// width: 100%;
+			@include adaptiveValue("height", 64, 50);
+			flex-direction: row-reverse;
+			// margin: 0 auto;
+			@media (max-width: $mobile) {
+				width: 100%;
+			}
+		}
+		.quantity__button {
+			flex: 0 0 rem(55);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&::before,
+			&::after {
+				width: rem(18);
+				background-color: $blackColor;
+				width: rem(18);
+				height: rem(2);
+				transition: all 0.3s ease 0s;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					&::before,
+					&::after {
+						background-color: $pinkColor;
+					}
+				}
+			}
+		}
+		.quantity__input {
+			input {
+				color: $blackColor;
+				font-size: rem(24);
+			}
+		}
+	}
+	// .footer-content-main-product__button
+	&__button {
+		width: 100%;
+		display: inline-flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		column-gap: em(20, 24);
+	}
+}
+
+//==========================================================================================================================
+
+//!==========================================================================================================================
+// ! проверить код, подчистить и можно на гит и дальше блоки

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Карточка товара"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_card-product">
+				<section class="page__product product">
+					<div class="product__container">
+						<nav class="product__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="">Фены Dyson Supersonic</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Фен Dyson Supersonic HD07 с 5 насадками в дорожном чехле и расческами</span>
+								</li>
+							</ul>
+						</nav>
+						<div class="product__main main-product">
+							<div class="main-product__images images-product">
+								<div class="images-product__thumbs thumbs-images swiper">
+									<div class="thumbs-images__wrapper swiper-wrapper">
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="thumbs-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="images-product__slider slider-images swiper">
+									<div class="slider-images__wrapper swiper-wrapper">
+										<div class="slider-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="slider-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="slider-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="slider-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+										<div class="slider-images__slide-ibg swiper-slide">
+											<img src="@img/mainpage/bg.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-product__content content-main-product">
+								<div class="content-main-product__body">
+									<div class="content-main-product__title">
+										Фен Dyson Supersonic HD07 с 5 насадками в дорожном чехле и расческами
+									</div>
+									<div class="content-main-product__text">
+										Главное отличие фена Dyson в быстром и безопасном высушивании волос. В рукоятку встроен датчик температуры, благодаря которому она не поднимается выше 100 градусов. Это позволяет пользоваться устройством без вреда. В комплекте 5 насадок, которые подходят для укладки и сушки на разных режимах. Есть практичный черный чехол, предназначенный для аккуратной перевозки и хранения. Расчески можно использовать отдельно от девайса или во время сушки с целью предотвратить запутывание.
+									</div>
+									<a class="content-main-product__more btn-more" href="">Показать еще</a>
+									<div class="content-main-product__available">В наличии</div>
+									<div class="content-main-product__value">
+										<div class="content-main-product__old-price">47 990 Р</div>
+										<div class="content-main-product__price">47 990 Р</div>
+									</div>
+									<div class="content-main-product__footer footer-content-main-product">
+										<div data-quantity class="footer-content-main-product__quantity quantity">
+											<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+											<div class="quantity__input">
+												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+											</div>
+											<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+										</div>
+										<a class="footer-content-main-product__button button button_black _icon-shopping-bag" href=""><span class="">В корзину</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 				<section class="page__information information">
+					<div class="information__container">
+
+						<div data-tabs class="information__tabs tabs-information">
+							<nav data-tabs-titles class="tabs-information__navigation">
+								<button type="button" class="tabs-information__title _tab-active">Таб №1</button>
+								<button type="button" class="tabs-information__title">Таб №2</button>
+								<button type="button" class="tabs-information__title">Таб №3</button>
+							</nav>
+							<div data-tabs-body class="tabs-information__content">
+								<div class="tabs-information__body ">
+									Содержимое первого таба
+								</div>
+								<div class="tabs-information__body ">
+									Содержимое второго таба
+								</div>
+								<div class="tabs-information__body ">
+									Содержимое третьего таба
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section> -->
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

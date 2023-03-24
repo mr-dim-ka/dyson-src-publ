@@ -5,7 +5,11 @@ import { flsModules } from "./modules.js";
 
 import mixitup from 'mixitup';
 
-var mixer = mixitup('.products__items');
+
+const mixs = document.querySelectorAll('[data-filter]');
+if (mixs.length) {
+	var mixer = mixitup('.products__items');
+}
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -50,7 +54,8 @@ const page = document.querySelector('.page');
 const headerHeight = header.offsetHeight;
 
 if(header){
-	page.style.cssText=`
-	padding-top: ${headerHeight}px`
+	page.style.cssText = `
+		padding-top: ${headerHeight}px
+	`;
 }
 

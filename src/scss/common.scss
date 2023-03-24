@@ -7,8 +7,8 @@
 	color: #fff;
 	text-align: center;
 	border-radius: rem(3);
-	@include adaptiveValue("padding-top", 15, 8);
-	@include adaptiveValue("padding-bottom", 15, 8);
+	@include adaptiveValue("padding-top", 15, 10);
+	@include adaptiveValue("padding-bottom", 15, 10);
 	@include adaptiveValue("padding-left", 50, 25);
 	@include adaptiveValue("padding-right", 50, 25);
 	// .button_pink
@@ -110,15 +110,6 @@
 
 //==========================================================================================================================
 .products {
-	// .products__container
-	&__container {
-	}
-	// .products__breadcrumbs
-	&__breadcrumbs {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 25);
-		}
-	}
 	// .products__title
 	&__title {
 		&:not(:last-child) {
@@ -296,7 +287,7 @@
 	}
 	// .info-products-card__favorite
 	&__favorite {
-		display: inline-block;
+		display: none;
 		&::before {
 			font-size: rem(30);
 			transition: all 0.3s ease 0s;
@@ -306,9 +297,9 @@
 				color: $pinkColor;
 			}
 		}
-		.page_categories & {
+		/* 		.page_categories & {
 			display: none;
-		}
+		} */
 	}
 }
 .value-products-card {
@@ -398,7 +389,7 @@
 	// .breadcrumbs__link
 	&__link {
 		font-weight: 300;
-		font-size: rem(20);
+		@include adaptiveValue("font-size", 20, 16);
 		line-height: 135%; /* 27/20 */
 		color: #ababab;
 		display: flex;
@@ -414,7 +405,7 @@
 	&__current {
 		color: $blackColor;
 		font-weight: 300;
-		font-size: rem(20);
+		@include adaptiveValue("font-size", 20, 16);
 		line-height: 135%; /* 27/20 */
 	}
 }
