@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Thumbs } from 'swiper';
+import Swiper, { Navigation, Thumbs, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -37,8 +37,10 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 5,
 			spaceBetween: 0,
-			// autoHeight: true,
+			autoHeight: true,
 			speed: 800, 
+			direction:'vertical',
+
 
 /* 			thumbs: {
 				swiper: thumbsSwiper
@@ -76,27 +78,34 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-/* 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			}, */
+ 			navigation: {
+				prevEl: '.thumbs-images__prev',
+				nextEl: '.thumbs-images__next',
+			}, 
 
 			// Брейкпоинты
 			
 			breakpoints: {
+				0: {
+					
+				},
  				320: {
 					slidesPerView: 5,
 					spaceBetween: 10,
+					direction:'horizontal',
 					// 
 				},
 				768: {
 					spaceBetween: 10,
 					slidesPerView: 5,
+					direction:'horizontal',
 					// autoHeight: true,
 				},
 				992: {
 					spaceBetween: 0,
 					slidesPerView: 5,
+					direction:'vertical',
+					
 				},
 				1268: {
 				},
@@ -109,12 +118,12 @@ function initSliders() {
 		new Swiper('.slider-images', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Thumbs],
+			modules: [Navigation, Thumbs, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 15,
-			// autoHeight: true,
+			autoHeight: true,
 			speed: 800,
 
 			thumbs: {
@@ -137,12 +146,12 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.slider-images__dotts',
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -153,10 +162,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			navigation: {
+	/* 		navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
-			},
+			}, */
 
 			// Брейкпоинты
 			/*

@@ -160,6 +160,48 @@
 			}
 		}
 	}
+	&_period {
+		border: 1px solid transparent;
+		/* 		transition: all 0.3s ease 0s;
+		&._select-open {
+			border: 1px solid $blackColor;
+		} */
+		.select__body {
+		}
+		.select__title {
+			border: 0;
+			border-bottom: 1px solid $blackColor;
+			border-radius: 0px;
+		}
+		.select__value {
+			padding: rem(20) rem(10);
+			@include adaptiveValue("height", 70, 35);
+			column-gap: rem(15);
+			display: flex;
+			align-items: center;
+			&::after {
+				content: "\e906";
+				@extend %ic;
+				font-size: rem(14);
+				@include adaptiveValue("font-size", 14, 8);
+			}
+		}
+		.select__options {
+			@include adaptiveValue("top", 70, 40);
+			background-color: #fdfdfd;
+			padding: 0;
+		}
+		.select__option {
+			transition: all 0.3s ease 0s;
+			padding: rem(8) rem(25);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $pinkColor;
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 // Тег
