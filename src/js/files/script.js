@@ -59,3 +59,19 @@ if(header){
 	`;
 }
 
+
+
+const videoModule = document.querySelector('.video-module__item');
+
+if (videoModule) {
+	videoModule.addEventListener("click", function (e) {
+		if (!videoModule.classList.contains('_active')) {
+			videoModule.querySelector('video').play();
+			videoModule.querySelector('video').muted = false;
+			videoModule.classList.add('_active');
+		}else{
+			videoModule.querySelector('video').pause();
+			videoModule.classList.remove('_active');
+		}
+	});
+}

@@ -10,6 +10,9 @@
 		@include adaptiveValue("padding-top", 90, 40);
 		@include adaptiveValue("padding-bottom", 50, 40);
 	}
+	// .page__video-module
+	&__video-module {
+	}
 }
 
 //==========================================================================================================================
@@ -851,5 +854,49 @@
 
 //==========================================================================================================================
 
+.video-module {
+	// .video-module__container
+	&__container {
+	}
+	// .video-module__item
+	&__item {
+		cursor: pointer;
+		position: relative;
+		padding-bottom: percent(763, 1360);
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-right-width: 0;
+			border-width: 50px 0 50px 100px;
+			@include adaptiveValue("border-left-width", 100, 30);
+			@include adaptiveValue("border-top-width", 50, 15);
+			@include adaptiveValue("border-bottom-width", 50, 15);
+			border-color: transparent transparent transparent #fff;
+		}
+		&._active {
+			&::before {
+				display: none;
+			}
+		}
+		video {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+
+//==========================================================================================================================
+
 //!==========================================================================================================================
-// ! пункты доставки сделать, поправить слайдеры (с картой разобраться)
+// ! добавил видео, но в гит не заливал
