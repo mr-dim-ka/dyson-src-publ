@@ -13,6 +13,11 @@
 	// .page__video-module
 	&__video-module {
 	}
+	// .page__similar
+	&__similar {
+		@include adaptiveValue("padding-top", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 40);
+	}
 }
 
 //==========================================================================================================================
@@ -898,5 +903,34 @@
 
 //==========================================================================================================================
 
+.similar {
+	// .similar__container
+	&__container {
+	}
+	// .similar__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 30);
+		}
+	}
+	// .similar__products
+	&__products {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 130, 40);
+		}
+	}
+	// .similar__button
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
+	// .similar__btn
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+	}
+}
+//==========================================================================================================================
+
 //!==========================================================================================================================
-// ! добавил видео, но в гит не заливал

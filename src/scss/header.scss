@@ -24,6 +24,16 @@
 			left: 0;
 		}
 	}
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+		padding: rem(5) 0;
+		background-color: rgba($blackColor, 0.9);
+	}
+	&._header-show {
+		top: 0;
+		transition: all 0.3s ease 0s;
+	}
 	// .header__container
 	&__container {
 	}
@@ -66,9 +76,18 @@
 	}
 	// .header__favorive
 	&__favorive {
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+		transition: transform 0.3s ease 0s;
 		&::before {
 			font-size: rem(28);
 			color: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 	// .header__cart

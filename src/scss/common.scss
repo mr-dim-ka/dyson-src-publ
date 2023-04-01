@@ -281,13 +281,17 @@
 		padding-bottom: rem(7);
 		@include adaptiveValue("padding-left", 30, 15);
 		@include adaptiveValue("padding-right", 30, 15);
-		.page_categories & {
+		.page_categories &,
+		.page_card-product & {
 			display: none;
 		}
 	}
 	// .info-products-card__favorite
 	&__favorite {
 		display: none;
+		.page_card-product & {
+			display: block;
+		}
 		&::before {
 			font-size: rem(30);
 			transition: all 0.3s ease 0s;
@@ -329,6 +333,9 @@
 
 	// .footer-products-card__quantity
 	&__quantity {
+		.page_card-product & {
+			display: none;
+		}
 		&.quantity {
 			border: 1px solid $blackColor;
 			border-radius: rem(3);
